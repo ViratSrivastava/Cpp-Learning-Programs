@@ -9,7 +9,7 @@
       "stopAtEntry": false,
       "externalConsole": true,
       "cwd": "c:/Users/VIRAT/Projects/Cpp-Learning-Programs",
-      "program": "c:/Users/VIRAT/Projects/Cpp-Learning-Programs/build/Debug/outDebug",
+      "program": "${workspaceFolder}/${fileBasenameNoExtension}.exe",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
