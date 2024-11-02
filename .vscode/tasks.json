@@ -2,43 +2,25 @@
     "version": "2.0.0",
     "tasks": [
       {
-        "label": "Compile and run",
+        "label": "Compile and run basic.cpp",
         "type": "shell",
-        "command": "",
+        "command": "powershell.exe",
         "args": [
-          "copy",
-          "\"${file}\"",
-          "${workspaceFolder}\\jspwTest.cpp",
-          "&&",
-          "g++",
-          "jspwTest.cpp",
-          "-o",
-          "jspwTest",
-          "&&",
-          "jspwTest",
-          "<",
-          "input.txt",
-          ">",
-          "output.txt",
-          "&&",
-          "del",
-          "jspwTest.exe",
-          "&&",
-          "del",
-          "jspwTest.cpp"
+          "-Command",
+          "copy \"${file}\" \"${workspaceFolder}\\jspwTest.cpp\"; g++ \"${workspaceFolder}\\jspwTest.cpp\" -o \"${workspaceFolder}\\jspwTest\"; Get-Content \"${workspaceFolder}\\input.txt\" | ./jspwTest | Set-Content \"${workspaceFolder}\\output.txt\"; Remove-Item \"${workspaceFolder}\\jspwTest.exe\"; Remove-Item \"${workspaceFolder}\\jspwTest.cpp\""
         ],
-        "presentation": {
-          "reveal": "never"
-        },
         "group": {
           "kind": "build",
-          "isDefault": true,
+          "isDefault": true
+        },
+        "presentation": {
+          "reveal": "never"
         },
         "problemMatcher": {
           "owner": "cpp",
           "fileLocation": [
             "relative",
-            "${workspaceRoot}"
+            "${workspaceFolder}"
           ],
           "pattern": {
             "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
@@ -52,3 +34,4 @@
       }
     ]
   }
+  
