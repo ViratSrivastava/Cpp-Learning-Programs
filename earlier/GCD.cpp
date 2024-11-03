@@ -8,15 +8,15 @@ int main()
     cin >> j;
     m = i;
     n = j;
-    while(i!=j)
+    while (i != j)
     {
-        if(i>j)
+        if (i > j)
         {
-            i = i-j;
+            i = i - j;
         }
         else
         {
-            j = j-i;
+            j = j - i;
         }
     }
     cout << "GCD of " << m << " and " << n << " is " << i << endl;
