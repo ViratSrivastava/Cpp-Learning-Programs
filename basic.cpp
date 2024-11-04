@@ -2,27 +2,15 @@
 using namespace std;
 int main()
 {
-    int A[3] = {1, 2, 3};
-    for( int i:A)
+    int n, key, l, h, i, mid;
+    cin >> n;
+    l = 0;
+    h = n - 1;
+    mid = (l+h)/2;
+    int A[n];
+    for (i = 0;i<n;i++)
     {
-        cout << ++i << endl;
-    }
-    // operations on the elements of the array are not reflected in the array itself
-    for(int i:A)
-    {
-        cout << i << endl;
+        cin >> A[i];
     }
 
-    for( int &i:A) // reference to the elements of the array
-    // &i is a reference to the elements of the array
-    {
-        cout << ++i << endl;
-    }
-    // operations on the elements of the array are reflected in the array itself
-    for(int i:A)
-    {
-        cout << i << endl;
-    }
-    
-    return 0;
-}
+} 
