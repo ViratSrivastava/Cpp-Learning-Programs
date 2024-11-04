@@ -3,22 +3,7 @@ using namespace std;
 
 int main()
 {
-    int m, n, i, j;
-    cin >> i;
-    cin >> j;
-    m = i;
-    n = j;
-    while(i!=j)
-    {
-        if(i>j)
-        {
-            i = i-j;
-        }
-        else
-        {
-            j = j-i;
-        }
-    }
-    cout << "GCD of " << m << " and " << n << " is " << i << endl;
+    int A[5] = {12, 03, 56, 12, 32};
+    
     return 0;
 }
