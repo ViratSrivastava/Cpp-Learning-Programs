@@ -1,4 +1,4 @@
-#include <iostream>
+termina#include <iostream>
 using namespace std;
 int main()
 {
