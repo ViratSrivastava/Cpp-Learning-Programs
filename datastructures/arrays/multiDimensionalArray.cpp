@@ -12,7 +12,8 @@ int main()
             cin >> A[n][m];
         }
     }
-
+    // take input fom array 
+    // print the array
     for (int i = 0; i < n; i++)
     {
         for (int j = 0; j < m; j++)
