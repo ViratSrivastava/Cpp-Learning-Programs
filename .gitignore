@@ -1,4 +1,4 @@
-.exe
+*.exe
 basic.cpp
 input.txt
 output.txt
