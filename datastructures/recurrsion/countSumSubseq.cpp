@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-int countSubSeq(int i, int k, int sum, int count, vector<int>& arr, vector<int>& sub){
+int countSubSeq(int i, int k, int sum, vector<int>& arr, vector<int>& sub){
     if(i >= arr.size()){
         if(sum == k){
             return 1;
@@ -12,12 +12,12 @@ int countSubSeq(int i, int k, int sum, int count, vector<int>& arr, vector<int>&
     sub.push_back(arr[i]);
     sum += arr[i];
 
-    int take = countSubSeq(i+1, k, sum, count, arr, sub);
+    int take = countSubSeq(i+1, k, sum, arr, sub);
 
     sub.pop_back();
     sum -= arr[i];
 
-    int noTake = countSubSeq(i+1, k, sum, count, arr, sub);
+    int noTake = countSubSeq(i+1, k, sum, arr, sub);
     return take+noTake;
 }
 int main(){
@@ -31,6 +31,6 @@ int main(){
     for(int i = 0; i < n; i++){
         cin >> arr[i];
     }
-    cout << countSubSeq(i, k, sum, count, arr, sub);
+    cout << countSubSeq(i, k, sum, arr, sub);
     return 0;
 }
